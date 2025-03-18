@@ -70,7 +70,7 @@ const APP = (function() {
     function changeAppearance(tempurature){
         const body = document.querySelector('body');
         // Ensure Tailwind generates the classes by referencing them somewhere in the code
-        if (tempurature > 30) {
+        if (tempurature < 30) {
             body.classList.remove('from-blue-400', 'to-blue-800');
             body.classList.add('from-red-400', 'to-red-800');
         } else {
