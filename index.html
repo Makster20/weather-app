@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!-- <script defer src="main.js"></script> -->
+    <script defer src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Weather</title>
 </head>
-<body class="h-screen poppins-regular flex flex-col items-center bg-gradient-to-b from-blue-400 to-blue-800">
+<body class="h-screen poppins-regular flex flex-col items-center bg-gradient-to-b from-blue-400 to-blue-800 transition-colors duration-500 ease-in-out">
     <h1 class="poppins-bold text-6xl mt-6 text-white">Weather</h1>
     <div class="flex justify-center mt-10 w-2/4 text-white bg-transparent-input text-2xl rounded-full outline-none p-2 px-6">
         <input type="text" class="w-11/12 text-white bg-transparent text-2xl rounded-full outline-none p-2 px-6">
@@ -20,37 +20,44 @@
         </svg>          
     </div>
     <div class="flex justify-center gap-x-8">
-        <img src="imgs/cloudy-day.png" alt="cloudy" class="w-5/12">
+        <img src="imgs/cloudy-day.png" alt="cloudy" class="w-5/12" id="main-img">
         <div class="flex flex-col items-center text-white pt-12">
-            <span class="text-7xl poppins-semibold">50°C</span>
+            <span class="text-7xl poppins-semibold" id="tempurature">50°C</span>
             <hr class="w-1/2 h-1 mx-auto my-4 border-0 rounded-sm bg-white">
-            <p class="text-3xl">WIND: <span class="poppins-bold">10KPH</span> <br>
-                FEELS LIKE: <span class="poppins-bold">51°C</span> <br>
-                HUMIDITY: <span class="poppins-bold">5%</span> <br>
+            <p class="text-3xl">WIND: <span class="poppins-bold" id="wind">10 KPH</span> <br>
+                FEELS LIKE: <span class="poppins-bold" id="feelslike">51°C</span> <br>
+                HUMIDITY: <span class="poppins-bold" id="humidity">5%</span> <br>
                 </p>
         </div>
     </div>
-    <h2 class="text-white text-4xl poppins-bold">Partially cloudy</h2>
+    <h2 class="text-white text-4xl poppins-bold" id="conditions">Partially cloudy</h2>
+
     <hr class="w-20 h-1 mx-auto my-4 border-0 rounded-sm bg-white">
-    <h3 class="text-white text-3xl">Liverpool, England, United Kingdom</h3>
-    <div class="flex justify-center mt-10 w-2/4 text-white bg-transparent-input text-2xl rounded-full outline-none p-2 px-6">
-        <div class="flex flex-col items-center">
+
+    <h3 class="text-white text-3xl" id="location-address">Liverpool, England, United Kingdom</h3>
+
+    <div class="mb-10 flex justify-center mt-10 w-2/4 text-white bg-transparent-input text-2xl rounded-full outline-none p-2 px-6">
+        <div class="flex flex-col items-center" id="day1">
             <img src="imgs/cloudy-day.png" alt="cloudy" class="w-1/2">
             <span class="text-2xl poppins-semibold text-white">50°C</span>
         </div>
-        <div class="flex flex-col items-center">
+
+        <div class="flex flex-col items-center" id="day2">
             <img src="imgs/cloudy-day.png" alt="cloudy" class="w-1/2">
             <span class="text-2xl poppins-semibold text-white">50°C</span>
         </div>
-        <div class="flex flex-col items-center">
+
+        <div class="flex flex-col items-center" id="day3">
             <img src="imgs/snowy.png" alt="cloudy" class="w-1/2">
             <span class="text-2xl poppins-semibold text-white">50°C</span>
         </div>
-        <div class="flex flex-col items-center">
+
+        <div class="flex flex-col items-center" id="day4">
             <img src="imgs/cloudy-day.png" alt="cloudy" class="w-1/2">
             <span class="text-2xl poppins-semibold text-white">50°C</span>
         </div>
-        <div class="flex flex-col items-center">
+
+        <div class="flex flex-col items-center" id="day5">
             <img src="imgs/cloudy-day.png" alt="cloudy" class="w-1/2">
             <span class="text-2xl poppins-semibold text-white">50°C</span>
         </div>
